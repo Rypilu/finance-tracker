@@ -2,7 +2,7 @@
   "name": "finance_tracker",
   "private": true,
   "engines": {
-    "node": "16.x"
+    "node": "12.x"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
