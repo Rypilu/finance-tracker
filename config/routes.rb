@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_stocks, only: [:create]
+  resources :user_stocks, only: [:create, :destroy]
   devise_for :users
   # welcome = name of controller home = name of method in controller app/controllers/...
   root 'welcome#index'
