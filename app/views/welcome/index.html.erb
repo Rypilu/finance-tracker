@@ -1,2 +1,22 @@
-<h1>Welcome to the Finance Tracker app</h1>
-<p>Create a welcome page</p>
+<h2>Welcome to the finance-tracker app!</h2>
+<div class="m-4">
+  <p>
+    This is the Stock Tracker Social Media App implementation from
+    <%= link_to 'The Complete Ruby on Rails Developer Course',
+                'https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/',
+                target: '_blank' %>.
+    <br>
+    Github repository can be found at
+    <%= link_to 'https://github.com/Rypilu/finance-tracker',
+                'https://github.com/Rypilu/finance-tracker',
+                target: '_blank'%>.
+  </p>
+
+  <% if current_user.present? %>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete,
+                class: 'btn btn-danger' %>
+  <% else %>
+    <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-info' %>
+    <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-info' %>
+  <% end %>
+</div>
